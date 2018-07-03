@@ -831,7 +831,7 @@ void DbwNode::recvBrakeCmd(const dbw_mkz_msgs::BrakeCmd::ConstPtr& msg)
   if (msg->ignore) {
     ptr->IGNORE = 1;
   }
-  ptr->count = msg->count;
+  ptr->COUNT = msg->count;
   pub_can_.publish(out);
 }
 
@@ -875,7 +875,7 @@ void DbwNode::recvThrottleCmd(const dbw_mkz_msgs::ThrottleCmd::ConstPtr& msg)
   if (msg->ignore) {
     ptr->IGNORE = 1;
   }
-  ptr->count = msg->count;
+  ptr->COUNT = msg->count;
   pub_can_.publish(out);
 }
 
@@ -905,7 +905,7 @@ void DbwNode::recvSteeringCmd(const dbw_mkz_msgs::SteeringCmd::ConstPtr& msg)
   if (msg->quiet) {
     ptr->QUIET = 1;
   }
-  ptr->count = msg->count;
+  ptr->COUNT = msg->count;
   pub_can_.publish(out);
 }
 
